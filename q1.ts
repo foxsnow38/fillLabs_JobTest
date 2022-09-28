@@ -4,7 +4,9 @@ const findADec= (input:string[]) =>{
 
 
 const result  = input.sort((a,b):number=>{
+
     let first=0,second=0
+
 for (let index = 0; index < a.length; index++) {
       if (  a[index] == `a`) first++  
   
@@ -17,12 +19,13 @@ return second-first
 
 })
 
-console.log(result)
+return result
 
 
 
 }
-findADec(["aaaasd", "a", "aab", "aaabcd", "ef", "cssssssd", "fdz", "kf", "zc", "lklklklklklklklkl", "l"])
+console.log(
+      findADec(["aaaasd", "a", "aab", "aaabcd", "ef", "cssssssd", "fdz", "kf", "zc", "lklklklklklklklkl", "l"]))
 
 
 
