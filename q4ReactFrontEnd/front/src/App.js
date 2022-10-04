@@ -11,14 +11,17 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { Button } from '@mui/material';
 import TextField from '@mui/material/TextField';
+import { useRestContext } from './data/restContext';
 
 function App() {
+  
 const [users,setUsers] = React.useState(null)
+  const {getUser} = useRestContext()
   React.useEffect(()=>{
     setUsers([{id:"1",user:"ali"},
     {id:"2",user:"veli"},
     {id:"3",user:"ayse"}])
-
+getUser()
   },[])
 
   return (
